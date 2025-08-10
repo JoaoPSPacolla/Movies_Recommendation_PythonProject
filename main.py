@@ -155,9 +155,6 @@ print(get_recommendations('Interstellar'))
 print("\nRecomendações para 'Deadpool':")
 print(get_recommendations('Deadpool'))
 
-# É necessário instalar a biblioteca wordcloud
-# pip install wordcloud
-
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
@@ -223,11 +220,10 @@ plt.yticks(rotation=0)
 plt.savefig('heatmap_similaridade.png')
 plt.show()
 
-"""# Streamlit
+"""
+# Streamlit
 
 """
-
-!pip install streamlit pyngrok
 
 from pyngrok import ngrok #biblioteca que serve para criar uma rede de conexão entre a minha máquina e a internet, permitindo rodar o app
 ngrok.set_auth_token('2zvutG8V1djDOFpsoIU70IC67Q3_5JGKC1BrtJmQh4MNQYY1q')
@@ -370,9 +366,6 @@ ngrok.set_auth_token('2zvutG8V1djDOFpsoIU70IC67Q3_5JGKC1BrtJmQh4MNQYY1q')
 
 from pyngrok import ngrok
 import subprocess
-
-# Mata ngrok antigo, se existir
-!kill -9 $(pgrep ngrok) 2>/dev/null
 
 # Cria o túnel na porta 8501
 public_url = ngrok.connect(8501)
